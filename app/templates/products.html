@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Product List</h1>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }} - {{ product.category }} - ${{ product.price }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Add Product</h2>
+    <form action="/add_product" method="POST">
+        Name: <input type="text" name="name"><br>
+        Category: <input type="text" name="category"><br>
+        Price: <input type="text" name="price"><br>
+        <input type="submit" value="Add Product">
+    </form>
+    <a href="/">Back to User Management</a>
+</body>
+</html>
+
