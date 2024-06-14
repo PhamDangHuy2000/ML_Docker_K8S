@@ -71,12 +71,12 @@ Ensure the following software is installed:
 - kubectl apply -f kubernetes/ingress.yaml
   
 +   Ensure that all resources are created successfully:
-kubectl get pods
-kubectl get services
-kubectl get ingress
+    + kubectl get pods
+    + kubectl get services
+    + kubectl get ingress
 2. **Verify Deployments**
 - Check the status of the pods to ensure they are running:
-kubectl get pods
+    + kubectl get pods
 - You should see output indicating that the Flask and PostgreSQL pods are running.
 3. **Access the Application**
 -   Open your browser and navigate to the domain specified in your Ingress resource, e.g., `http://your-app-domain.com/`.
